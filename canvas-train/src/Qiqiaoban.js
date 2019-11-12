@@ -67,12 +67,14 @@ function Qiqiaoban() {
     console.log('piece', piece.p);
     ctx.beginPath();
     ctx.moveTo(piece.p[0].x, piece.p[0].y); 
-    piece.p && piece.p.forEach((item, index) => {
+    piece.p && piece.p.forEach((item) => {
       ctx.lineTo(item.x, item.y);
     })
     ctx.closePath();
     ctx.fillStyle = piece.color;
+    ctx.strokeStyle = '#000';
     ctx.fill();
+    ctx.stroke();
 
   }
 
