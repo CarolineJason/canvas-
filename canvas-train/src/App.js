@@ -14,16 +14,16 @@ import Clock from '@components/Clock';
 function App() {
   return (
     <div className="App">
-      {/* <CanvasApi />
-      <Qiqiaoban />
-      <DrawArc />
-      <SaveStore />
-      <Translating />
-      <Rotating />
-      <Sacling /> */}
-      <Clip />
-      {/* <CanvasAnimation />
-      <Clock /> */}
+      {/* <CanvasApi /> */}
+      {/* <Qiqiaoban /> */}
+      {/* <DrawArc /> */}
+      {/* <SaveStore /> */}
+      {/* <Translating /> */}
+      {/* <Rotating /> */}
+      {/* <Sacling /> */}
+      {/* <Clip /> */}
+      {/* <CanvasAnimation /> */}
+      <Clock />
     </div>
   );
 }
