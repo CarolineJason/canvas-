@@ -8,7 +8,8 @@ import React from 'react';
 // import Rotating from './Rotating';
 // import Sacling from './Scaling';
 // import Clip from './Clip';
-import CanvasAnimation from './CanvasAnimation';
+// import CanvasAnimation from './CanvasAnimation';
+import Clock from './Clock/Clock';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
       {/* <Rotating /> */}
       {/* <Sacling /> */}
       {/* <Clip /> */}
-      <CanvasAnimation />
+      {/* <CanvasAnimation /> */}
+      <Clock />
     </div>
   );
 }
