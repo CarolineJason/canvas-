@@ -9,7 +9,8 @@ import React from 'react';
 // import Sacling from '@components/Scaling';
 // import Clip from '@components/Clip';
 // import CanvasAnimation from '@components/CanvasAnimation';
-import Clock from '@components/Clock';
+// import Clock from '@components/Clock';
+import DigitClock from './Clock/Clock';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
       {/* <Sacling /> */}
       {/* <Clip /> */}
       {/* <CanvasAnimation /> */}
-      <Clock />
+      {/* <Clock /> */}
+      <DigitClock />
     </div>
   );
 }
