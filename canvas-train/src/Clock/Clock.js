@@ -19,12 +19,14 @@ class Clock extends PureComponent {
   }
 
   init = () => {
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
-    setInterval(() => {
-      this.renderCLock(ctx);
-    }, 1000)
+    
+    // setInterval(() => {
+    //   this.renderCLock(ctx);
+    // }, 1000);
+
+    window.requestAnimationFrame(this.renderCLock);
   }
+
 
   renderDigit = (x, y, num, ctx) => {
     ctx.fillStyle = "rgb(0,102,153)";
@@ -47,7 +49,10 @@ class Clock extends PureComponent {
     return ret > 0 ? ret : 0;
   }
 
-  renderCLock = (ctx) => {
+  renderCLock = () => {
+    let canvas = document.getElementById('canvas');
+    let ctx = canvas.getContext('2d');
+
     ctx.clearRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
     curShowTimeSeconds = this.getCurrentShowTimeSeconds();
     var hours = parseInt(curShowTimeSeconds / 3600); // 秒 转 成 小时
@@ -62,6 +67,8 @@ class Clock extends PureComponent {
     this.renderDigit(MARGIN_LEFT + 70 * (R + 1), MARGIN_TOP, 10, ctx); // 绘制 :
     this.renderDigit(MARGIN_LEFT + 80 * (R + 1), MARGIN_TOP, parseInt(seconds / 10), ctx); // 绘制 秒 的 十位数
     this.renderDigit(MARGIN_LEFT + 95 * (R + 1), MARGIN_TOP, parseInt(seconds % 10), ctx); // 绘制 秒 的 个位数
+    
+    window.requestAnimationFrame(this.renderCLock);
   }
 
   render() {
