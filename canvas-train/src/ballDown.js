@@ -1,13 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const ball = { x: 100, y: 100, r: 20, g: 2, vx: 2, vy: 0, color: '#058' };
-let flag = false;
 function BallDown() {
-  useEffect(() => {
-    if (!flag) {
-      init();
-    }
-  });
 
   useEffect(() => {
     setInterval(() => {
@@ -41,18 +35,17 @@ function BallDown() {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
     ctx.strokeStyle = '#ccc';
-    ctx.beginPath();
     ctx.moveTo(0, 0);
     ctx.lineTo(0, 0);
     ctx.lineTo(900, 0);
     ctx.lineTo(900, 700);
     ctx.lineTo(0, 700);
-    ctx.closePath();
+    ctx.lineTo(0, 0);
     ctx.stroke();
-    flag = true;
   }
 
   const ballInit = () => {
+      init();
       renderBall();
       updateBall();
   }
