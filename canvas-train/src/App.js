@@ -10,7 +10,8 @@ import React from 'react';
 // import Clip from '@components/Clip';
 // import CanvasAnimation from '@components/CanvasAnimation';
 // import Clock from '@components/Clock';
-import DigitClock from './Clock/Clock';
+// import DigitClock from './Clock/Clock';
+import BallDown from './ballDown';
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
       {/* <Clip /> */}
       {/* <CanvasAnimation /> */}
       {/* <Clock /> */}
-      <DigitClock />
+      {/* <DigitClock /> */}
+      <BallDown />
     </div>
   );
 }

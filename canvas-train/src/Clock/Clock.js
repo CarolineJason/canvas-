@@ -19,11 +19,9 @@ class Clock extends PureComponent {
   }
 
   init = () => {
-    
     // setInterval(() => {
     //   this.renderCLock(ctx);
     // }, 1000);
-
     window.requestAnimationFrame(this.renderCLock);
   }
 
