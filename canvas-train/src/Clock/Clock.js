@@ -10,7 +10,7 @@ const R = 8; // 球的半径
 const MARGIN_TOP = 60;
 const MARGIN_LEFT = 30;
 
-const endTime = new Date('2019, 11, 21');
+const endTime = new Date('2019, 11, 22');
 var curShowTimeSeconds = 0;
 
 class Clock extends PureComponent {
@@ -67,7 +67,7 @@ class Clock extends PureComponent {
     this.renderDigit(MARGIN_LEFT + 70 * (R + 1), MARGIN_TOP, 10, ctx); // 绘制 :
     this.renderDigit(MARGIN_LEFT + 80 * (R + 1), MARGIN_TOP, parseInt(seconds / 10), ctx); // 绘制 秒 的 十位数
     this.renderDigit(MARGIN_LEFT + 95 * (R + 1), MARGIN_TOP, parseInt(seconds % 10), ctx); // 绘制 秒 的 个位数
-    
+
     window.requestAnimationFrame(this.renderCLock);
   }
 
