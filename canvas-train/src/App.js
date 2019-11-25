@@ -12,7 +12,11 @@ import React from 'react';
 // import Clock from '@components/Clock';
 // import DigitClock from './Clock/Clock';
 // import BallDown from './ballDown';
-import Progress from '@components/Progress';
+// import Progress from '@components/Progress';
+// import Star from '@components/Star';
+// import SaveStore from '@components/SaveStore';
+// import CreateBackgroundCanvas from '@components/createBackgroundCanvas';
+import Moon from '@components/Moon';
 
 function App() {
   return (
@@ -28,7 +32,11 @@ function App() {
       {/* <CanvasAnimation /> */}
       {/* <Clock /> */}
       {/* <DigitClock /> */}
-      <Progress />
+      {/* <Progress /> */}
+      {/* <Star /> */}
+      {/* <SaveStore /> */}
+      {/* <CreateBackgroundCanvas /> */}
+      <Moon />
     </div>
   );
 }

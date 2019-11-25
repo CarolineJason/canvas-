@@ -9,8 +9,8 @@ const WINDOW_HEIGHT = 768; // 画布 高度
 const R = 8; // 球的半径
 const MARGIN_TOP = 60;
 const MARGIN_LEFT = 30;
-
-const endTime = new Date('2019, 11, 22');
+let endTime = new Date();
+endTime.setTime(endTime.getTime() + 3600 * 1000);
 var curShowTimeSeconds = 0;
 
 class Clock extends PureComponent {
@@ -42,9 +42,15 @@ class Clock extends PureComponent {
 
   getCurrentShowTimeSeconds = () => {
     const curTime = new Date();
-    let ret = endTime.getTime() - curTime.getTime();
-    ret = Math.round(ret / 1000);
-    return ret > 0 ? ret : 0;
+
+    // 倒计时
+    // let ret = endTime.getTime() - curTime.getTime();
+    // ret = Math.round(ret / 1000);
+    // return ret > 0 ? ret : 0;
+
+    // 时钟
+    let ret = curTime.getHours() * 3600 + curTime.getMinutes() * 60 + curTime.getSeconds();
+    return ret;
   }
 
   renderCLock = () => {
