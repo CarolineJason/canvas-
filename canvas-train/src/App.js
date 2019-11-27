@@ -19,6 +19,7 @@ import CreateBackgroundCanvas from '@components/createBackgroundCanvas';
 import Moon from '@components/Moon';
 import ZhiMaScore from '@components/zhimaScore';
 import ProgressTrain from './Clock/progress-train';
+import AsyncAwait from './Clock/AsyncAwait';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path="/moon" component={Moon}></Route>
           <Route path="/zhiMaScore" component={ZhiMaScore}></Route>
           <Route path="/progressTrain" component={ProgressTrain}></Route>
+          <Route path="/asyncawait" component={AsyncAwait}></Route>
         </Switch>
       </BrowserRouter>
     </div>
