@@ -2,15 +2,25 @@ import React, { Component } from 'react'
 
 export default class Moon extends Component {
   componentDidMount() {
-    console.log((400 - 100)*this.dis(400,100,1200,400)/(1200 - 400));
-    this.moon();
+    this.test()
+        .then((data) => {
+          console.log('data:', data);
+          this.moon(data[0].per);
+        })
+  }
+
+  test = async () => {
+    const response = await fetch('http://localhost:5000/posts');
+    const percent = response.json();
+    return percent;
   }
 
   dis = (x1, y1, x2, y2) => {
     return Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2)*(y1 - y2));
   }
 
-  moon = () => {
+  moon = (percent) => {
+    console.log(111, percent);
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
     canvas.height = 800;

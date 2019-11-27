@@ -1,9 +1,7 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "per": 80
     }
   ],
   "comments": [
