@@ -100,8 +100,8 @@ class Progress extends Component {
 
   render() {
     return (
-      <div style={{ border: '1px solid #ccc' }}>
-        <canvas id="canvas" width="500" height="500"></canvas>
+      <div>
+        <canvas style={{ border: '1px solid #ccc', display: 'block' }} id="canvas" width="500" height="500"></canvas>
       </div>
     );
   }
