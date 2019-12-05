@@ -39,7 +39,8 @@ function App() {
           <Route path="/progress" component={Progress}></Route>
           <Route path="/star" component={Star}></Route>
           <Route path="/saveStore2" component={SaveStores}></Route>
-          <Route path="/createBackgroundCanvas" component={CreateBackgroundCanvas}></Route>
+          <Route path="/createBackgroundCanvas" component={CreateBackgroundCanvas}>
+          </Route>
           <Route path="/moon" component={Moon}></Route>
           <Route path="/zhiMaScore" component={ZhiMaScore}></Route>
           <Route path="/progressTrain" component={ProgressTrain}></Route>
