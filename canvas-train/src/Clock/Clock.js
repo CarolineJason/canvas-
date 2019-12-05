@@ -2,7 +2,6 @@ import React, {
   PureComponent
 } from 'react';
 import digit from './digit';
-// import { getCurrentShowTimeSeconds } from '../utils';
 
 const WINDOW_WIDTH = 1200; // 画布 宽度
 const WINDOW_HEIGHT = 768; // 画布 高度
@@ -59,12 +58,12 @@ class Clock extends PureComponent {
 
     ctx.clearRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
     curShowTimeSeconds = this.getCurrentShowTimeSeconds();
-    var hours = parseInt(curShowTimeSeconds / 3600); // 秒 转 成 小时
-    var minutes = parseInt((curShowTimeSeconds - hours * 3600) / 60); // 秒 转成 分钟
-    var seconds = parseInt(curShowTimeSeconds % 60);
+    var hours = parseInt(curShowTimeSeconds / 3600); // 获取 小时
+    var minutes = parseInt((curShowTimeSeconds - hours * 3600) / 60); // 获取分钟
+    var seconds = parseInt(curShowTimeSeconds % 60); // 获取 秒
 
-    this.renderDigit(MARGIN_LEFT, MARGIN_TOP, parseInt(hours / 10), ctx); // 绘制 小时 的 个位 数字
-    this.renderDigit(MARGIN_LEFT + 15 * (R + 1), MARGIN_TOP, parseInt(hours % 10), ctx); // 绘制 小时 的 十位 数字
+    this.renderDigit(MARGIN_LEFT, MARGIN_TOP, parseInt(hours / 10), ctx); // 绘制 小时 的 十位 数字
+    this.renderDigit(MARGIN_LEFT + 15 * (R + 1), MARGIN_TOP, parseInt(hours % 10), ctx); // 绘制 小时 的 个位 数字
     this.renderDigit(MARGIN_LEFT + 30 * (R + 1), MARGIN_TOP, 10, ctx); // 绘制 :
     this.renderDigit(MARGIN_LEFT + 40 * (R + 1), MARGIN_TOP, parseInt(minutes / 10), ctx); // 绘制 分钟 的 十位数
     this.renderDigit(MARGIN_LEFT + 55 * (R + 1), MARGIN_TOP, parseInt(minutes % 10), ctx); // 绘制 分钟 的 个位数

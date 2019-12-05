@@ -7,7 +7,6 @@ class Star extends Component {
     canvas.width = 1200;
     canvas.height = 700;
 
-    // ctx.fillStyle = '#000';
     // 添加渐变
     const skyStyle = ctx.createLinearGradient(0,0,0, document.getElementById('canvas').height);
     skyStyle.addColorStop(0.0, '#000');
@@ -36,8 +35,6 @@ class Star extends Component {
   };
 
   startStar = (ctx, R, r, x, y, roa) => {
-    // ctx.strokeStyle = '#000';
-    // ctx.lineWidth = 3;
 
     ctx.fillStyle = 'yellow';
     ctx.beginPath();
