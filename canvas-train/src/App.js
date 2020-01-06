@@ -21,6 +21,7 @@ import CreateBackgroundCanvasTrain from '@components/createBackgroundCanvasTrain
 import ZhiMaScore from '@components/zhimaScore';
 import ProgressTrain from './Clock/progress-train';
 import AsyncAwait from './Clock/AsyncAwait';
+import Scratch from '@components/Scratch';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path="/digitClock" component={DigitClock}></Route>
           <Route path="/star" component={Star}></Route>
           <Route path="/progress" component={Progress}></Route>
+          <Route path="/scratch" component={Scratch}></Route>
         </Switch>
       </BrowserRouter>
     </div>

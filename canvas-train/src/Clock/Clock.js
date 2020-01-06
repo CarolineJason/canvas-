@@ -8,8 +8,8 @@ const WINDOW_HEIGHT = 768; // 画布 高度
 const R = 8; // 球的半径
 const MARGIN_TOP = 60;
 const MARGIN_LEFT = 30;
-let endTime = new Date();
-endTime.setTime(endTime.getTime() + 3600 * 1000);
+// let endTime = new Date();
+// endTime.setTime(endTime.getTime() + 3600 * 1000);
 var curShowTimeSeconds = 0;
 
 class Clock extends PureComponent {
@@ -21,6 +21,9 @@ class Clock extends PureComponent {
     // setInterval(() => {
     //   this.renderCLock(ctx);
     // }, 1000);
+
+    // window.requestAnimationFrame() 告诉浏览器——你希望执行一个动画，并且要求浏览器在下次重绘之前调用指定的回调函数更新动画。
+    // 该方法需要传入一个回调函数作为参数，该回调函数会在浏览器下一次重绘之前执行
     window.requestAnimationFrame(this.renderCLock);
   }
 
